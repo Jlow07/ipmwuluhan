@@ -509,6 +509,7 @@ $(document.body, '#slider').on('mouseup touchend', function (event) {
 	mouseIsDown = false;
 	var currentMouse = event.clientX || event.changedTouches[0].pageX;
 	var relativeMouse = currentMouse - initialMouse;
+	console.log('geser');
   
 	if (relativeMouse < slideMovementTotal) {
 		$('.slide-text').fadeTo(300, 1);
@@ -518,6 +519,7 @@ $(document.body, '#slider').on('mouseup touchend', function (event) {
 		return;
 	}
   if (!slider.hasClass('unlocked') && !slider.hasClass('inactive')) {
+	  console.log('unlock');
     addPilihan();
   	slider.addClass('unlocked');
 	$('#locker').className('fa fa-lock fa-2x');
