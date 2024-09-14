@@ -518,7 +518,7 @@ $(document.body, '#slider').on('mouseup touchend', function (event) {
 		return;
 	}
   if (!slider.hasClass('unlocked') && !slider.hasClass('inactive')) {
-    editPilihan();
+    addPilihan();
   	slider.addClass('unlocked');
 	$('#locker').className('fa fa-lock fa-2x');
 } 
